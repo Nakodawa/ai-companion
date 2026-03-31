@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, 
+          maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#0F0F14">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>AI Companion</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header id="header">
+            <div class="header-row">
+                <div class="avatar">✦</div>
+                <div class="header-text">
+                    <h1>AI Companion</h1>
+                    <span id="status">Ready</span>
+                </div>
+                <button class="hdr-btn" id="settingsBtn" title="Settings">⚙️</button>
+                <button class="hdr-btn" id="clearBtn" title="New Chat">➕</button>
+            </div>
+        </header>
+
+        <!-- Messages -->
+        <main id="messages">
+            <div id="welcome" class="welcome">
+                <div class="welcome-icon">✦</div>
+                <h2>How can I help you today?</h2>
+                <div class="suggestions">
+                    <button class="suggestion-chip" 
+                            data-text="Explain quantum computing like I'm 10 years old">
+                        💡 Explain quantum computing simply
+                    </button>
+                    <button class="suggestion-chip" 
+                            data-text="Write me a professional email declining a meeting politely">
+                        📧 Write a decline email
+                    </button>
+                    <button class="suggestion-chip" 
+                            data-text="What are the best productivity tips for working on a tablet?">
+                        📱 Tablet productivity tips
+                    </button>
+                    <button class="suggestion-chip" 
+                            data-text="Help me plan a workout routine I can do at home with no equipment">
+                        💪 Home workout plan
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input -->
+        <footer id="input-area">
+            <div class="input-row">
+                <button class="voice-btn" id="voiceBtn" title="Voice input">🎤</button>
+                <textarea id="msgInput" placeholder="Ask anything..." 
+                          rows="1" autocomplete="off"></textarea>
+                <button class="send-btn" id="sendBtn">➤</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
